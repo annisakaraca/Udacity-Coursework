@@ -29,8 +29,13 @@ class beginMatch: UIViewController {
         present(controller, animated: true, completion: nil)
     }
     
-    @IBAction func playScissors(){
-        
+    @IBAction func playPaper(){
+        performSegue(withIdentifier: "playPaper", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController = segue.destination as! matchResults
+        viewController.userMove = 1
     }
 
 }

@@ -42,6 +42,18 @@ class matchResults: UIViewController {
                 resultsMessage.text = "You win! :D"
             }
         }
+        else if userMove == 1 {
+            if computerPlay == 0 {
+                resultsImage.image = #imageLiteral(resourceName: "PaperCoversRock")
+                resultsMessage.text = "You win! :D"
+            } else if computerPlay == 1 {
+                resultsImage.image = #imageLiteral(resourceName: "itsATie")
+                resultsMessage.text = "It's a tie!"
+            } else if computerPlay == 2 {
+                resultsImage.image = #imageLiteral(resourceName: "ScissorsCutPaper")
+                resultsMessage.text = "You lose :("
+            }
+        }
     }
     
     override func didReceiveMemoryWarning() {
